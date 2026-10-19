@@ -1,0 +1,1 @@
+cmd_/home/hermes-server/mcp251xfd-backport/mcp251xfd.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/hermes-server/mcp251xfd-backport/mcp251xfd.ko /home/hermes-server/mcp251xfd-backport/mcp251xfd.o /home/hermes-server/mcp251xfd-backport/mcp251xfd.mod.o ;  true

@@ -1,0 +1,1842 @@
+{
+ "mcp251xfd-core.c": {
+  "includes": [
+   [
+    15,
+    "linux/bitfield.h"
+   ],
+   [
+    16,
+    "linux/clk.h"
+   ],
+   [
+    17,
+    "linux/device.h"
+   ],
+   [
+    18,
+    "linux/module.h"
+   ],
+   [
+    19,
+    "linux/netdevice.h"
+   ],
+   [
+    20,
+    "linux/of.h"
+   ],
+   [
+    21,
+    "linux/of_device.h"
+   ],
+   [
+    22,
+    "linux/pm_runtime.h"
+   ],
+   [
+    24,
+    "asm/unaligned.h"
+   ],
+   [
+    26,
+    "mcp251xfd.h"
+   ]
+  ],
+  "configs": [
+   "CONFIG_CAN_MCP251XFD_SANITY",
+   "CONFIG_PM"
+  ],
+  "calls": {
+   "__mcp251xfd_get_model_str": [
+    74,
+    91,
+    2345
+   ],
+   "mcp251xfd_get_model_str": [
+    89,
+    546,
+    2346,
+    2442
+   ],
+   "mcp251xfd_get_mode_str": [
+    94,
+    495,
+    496,
+    591,
+    1708,
+    1718,
+    1722
+   ],
+   "mcp251xfd_vdd_enable": [
+    118,
+    160
+   ],
+   "regulator_enable": [
+    123,
+    140
+   ],
+   "mcp251xfd_vdd_disable": [
+    126,
+    175
+   ],
+   "regulator_disable": [
+    131,
+    149
+   ],
+   "mcp251xfd_transceiver_enable": [
+    135,
+    2242
+   ],
+   "mcp251xfd_transceiver_disable": [
+    144,
+    2271,
+    2292
+   ],
+   "mcp251xfd_clks_and_vdd_enable": [
+    152,
+    2469,
+    2721
+   ],
+   "clk_prepare_enable": [
+    156
+   ],
+   "clk_disable_unprepare": [
+    162,
+    179
+   ],
+   "usleep_range": [
+    165
+   ],
+   "mcp251xfd_clks_and_vdd_disable": [
+    171,
+    2520,
+    2533,
+    2714
+   ],
+   "mcp251xfd_cmd_prepare_write_reg": [
+    185,
+    350
+   ],
+   "mcp251xfd_first_byte_set": [
+    193
+   ],
+   "mcp251xfd_last_byte_set": [
+    194
+   ],
+   "mcp251xfd_spi_cmd_write": [
+    197
+   ],
+   "cpu_to_le32": [
+    198
+   ],
+   "memcpy": [
+    199,
+    1355,
+    2125
+   ],
+   "mcp251xfd_spi_cmd_crc_set_len_in_reg": [
+    204
+   ],
+   "mcp251xfd_crc16_compute": [
+    208,
+    2141
+   ],
+   "put_unaligned_be16": [
+    209,
+    2142
+   ],
+   "mcp251xfd_tef_tail_get_from_chip": [
+    221,
+    1096
+   ],
+   "regmap_read": [
+    227,
+    243,
+    262,
+    280,
+    460,
+    600,
+    1057,
+    1143,
+    1457,
+    1485,
+    1544,
+    1636,
+    1833,
+    1892,
+    2332
+   ],
+   "mcp251xfd_tx_tail_get_from_chip": [
+    237,
+    1210,
+    1789
+   ],
+   "MCP251XFD_REG_FIFOSTA": [
+    244,
+    262,
+    1504
+   ],
+   "FIELD_GET": [
+    249,
+    267,
+    464,
+    486,
+    491,
+    1064,
+    1065,
+    1173,
+    1324,
+    1325,
+    1331,
+    1345,
+    1351,
+    1787,
+    1843,
+    1907,
+    1957,
+    1959,
+    2080,
+    2081,
+    2443,
+    2444
+   ],
+   "mcp251xfd_rx_head_get_from_chip": [
+    255,
+    1300
+   ],
+   "mcp251xfd_rx_tail_get_from_chip": [
+    273,
+    1121
+   ],
+   "MCP251XFD_REG_FIFOUA": [
+    280
+   ],
+   "mcp251xfd_tx_ring_init_tx_obj": [
+    292,
+    354
+   ],
+   "mcp251xfd_get_tx_obj_addr": [
+    302,
+    365
+   ],
+   "mcp251xfd_spi_cmd_write_crc_set_addr": [
+    304
+   ],
+   "mcp251xfd_spi_cmd_write_nocrc": [
+    307
+   ],
+   "spi_message_init_with_transfers": [
+    323
+   ],
+   "ARRAY_SIZE": [
+    324,
+    380,
+    414,
+    2411
+   ],
+   "mcp251xfd_ring_init": [
+    327,
+    1003
+   ],
+   "mcp251xfd_get_tef_obj_addr": [
+    345,
+    1243
+   ],
+   "MCP251XFD_REG_FIFOCON": [
+    348,
+    772,
+    829,
+    1387
+   ],
+   "mcp251xfd_for_each_tx_obj": [
+    353
+   ],
+   "mcp251xfd_for_each_rx_ring": [
+    357,
+    440,
+    835,
+    1445,
+    1489
+   ],
+   "MCP251XFD_RX_FIFO": [
+    361
+   ],
+   "mcp251xfd_ring_free": [
+    376,
+    424,
+    2273,
+    2293
+   ],
+   "kfree": [
+    381,
+    871,
+    2419,
+    2421
+   ],
+   "mcp251xfd_ring_alloc": [
+    386,
+    2238
+   ],
+   "min": [
+    419,
+    1220,
+    2667
+   ],
+   "fls": [
+    419
+   ],
+   "kzalloc": [
+    421,
+    865,
+    2395,
+    2399
+   ],
+   "netdev_dbg": [
+    435,
+    441,
+    447,
+    1567,
+    1575,
+    1583,
+    1592,
+    1602,
+    1610,
+    1706,
+    1716,
+    1753,
+    2171
+   ],
+   "mcp251xfd_chip_get_mode": [
+    455,
+    584,
+    1701
+   ],
+   "__mcp251xfd_chip_set_mode": [
+    470,
+    507,
+    514,
+    905
+   ],
+   "FIELD_PREP": [
+    476,
+    528,
+    596,
+    651,
+    671,
+    676,
+    689,
+    690,
+    692,
+    694,
+    704,
+    705,
+    707,
+    709,
+    718,
+    720,
+    758,
+    765,
+    768,
+    798,
+    809,
+    815,
+    818,
+    822,
+    825,
+    1328,
+    1329,
+    2083,
+    2084,
+    2088,
+    2094,
+    2095
+   ],
+   "regmap_update_bits": [
+    477,
+    784,
+    860,
+    931,
+    961,
+    1191,
+    1386,
+    1503,
+    1837,
+    1896,
+    1969,
+    2326
+   ],
+   "regmap_read_poll_timeout": [
+    485,
+    539
+   ],
+   "netdev_err": [
+    493,
+    544,
+    549,
+    1102,
+    1127,
+    1148,
+    1236,
+    1561,
+    1720,
+    1770,
+    1799,
+    1919,
+    2047,
+    2217
+   ],
+   "mcp251xfd_chip_set_mode": [
+    504,
+    570,
+    976,
+    2504,
+    2515
+   ],
+   "mcp251xfd_chip_set_mode_nowait": [
+    511
+   ],
+   "mcp251xfd_osc_invalid": [
+    517,
+    543
+   ],
+   "mcp251xfd_chip_clock_enable": [
+    522,
+    566
+   ],
+   "regmap_write": [
+    534,
+    653,
+    658,
+    684,
+    696,
+    711,
+    722,
+    735,
+    748,
+    771,
+    804,
+    828,
+    926,
+    948,
+    956,
+    966,
+    1549
+   ],
+   "mcp251xfd_chip_softreset_do": [
+    560,
+    623
+   ],
+   "mcp251xfd_cmd_reset": [
+    562
+   ],
+   "spi_write_then_read": [
+    575
+   ],
+   "mcp251xfd_chip_softreset_check": [
+    578,
+    629
+   ],
+   "netdev_info": [
+    589,
+    605,
+    620,
+    1153,
+    1495,
+    1499,
+    1527,
+    1755,
+    1806,
+    1873,
+    2343,
+    2378,
+    2440
+   ],
+   "mcp251xfd_chip_softreset": [
+    614,
+    983,
+    2481
+   ],
+   "mcp251xfd_chip_clock_init": [
+    644,
+    987
+   ],
+   "mcp251xfd_set_bittiming": [
+    662,
+    991
+   ],
+   "clamp_t": [
+    716
+   ],
+   "mcp251xfd_chip_rx_int_enable": [
+    725,
+    995,
+    2364
+   ],
+   "mcp251xfd_chip_rx_int_disable": [
+    738,
+    975,
+    2371
+   ],
+   "mcp251xfd_chip_rx_fifo_init_one": [
+    752,
+    836
+   ],
+   "mcp251xfd_chip_rx_filter_init_one": [
+    776,
+    840
+   ],
+   "MCP251XFD_REG_FLTCON_FLTEN": [
+    781
+   ],
+   "MCP251XFD_REG_FLTCON_FBP": [
+    782
+   ],
+   "MCP251XFD_REG_FLTCON": [
+    785
+   ],
+   "MCP251XFD_REG_FLTCON_FLT_MASK": [
+    786
+   ],
+   "mcp251xfd_chip_fifo_init": [
+    790,
+    1005
+   ],
+   "mcp251xfd_chip_ecc_init": [
+    848,
+    999
+   ],
+   "regmap_raw_write": [
+    869
+   ],
+   "mcp251xfd_ecc_tefif_successful": [
+    876,
+    1281
+   ],
+   "mcp251xfd_get_normal_mode": [
+    883,
+    903,
+    1697
+   ],
+   "__mcp251xfd_chip_set_normal_mode": [
+    898,
+    911,
+    917
+   ],
+   "mcp251xfd_chip_set_normal_mode": [
+    909,
+    1011,
+    1819
+   ],
+   "mcp251xfd_chip_set_normal_mode_nowait": [
+    915,
+    1730,
+    1882
+   ],
+   "mcp251xfd_chip_interrupts_enable": [
+    920,
+    1034,
+    2258
+   ],
+   "mcp251xfd_chip_interrupts_disable": [
+    951,
+    974,
+    2049,
+    2288
+   ],
+   "mcp251xfd_chip_stop": [
+    969,
+    1018,
+    1036,
+    1670,
+    2277,
+    2291
+   ],
+   "mcp251xfd_chip_start": [
+    979,
+    1030,
+    2246
+   ],
+   "mcp251xfd_set_mode": [
+    1023
+   ],
+   "netdev_priv": [
+    1025,
+    1053,
+    1073,
+    2187,
+    2224,
+    2285,
+    2641
+   ],
+   "netif_wake_queue": [
+    1040,
+    1286
+   ],
+   "__mcp251xfd_get_berr_counter": [
+    1050,
+    1085,
+    1666
+   ],
+   "mcp251xfd_get_berr_counter": [
+    1070,
+    1680
+   ],
+   "mcp251xfd_check_tef_tail": [
+    1088,
+    1200,
+    1222
+   ],
+   "IS_ENABLED": [
+    1093,
+    1118,
+    1232
+   ],
+   "mcp251xfd_get_tef_tail": [
+    1100,
+    1186,
+    1258
+   ],
+   "mcp251xfd_check_rx_tail": [
+    1112,
+    1311
+   ],
+   "mcp251xfd_get_rx_tail": [
+    1125,
+    1421
+   ],
+   "mcp251xfd_handle_tefif_recover": [
+    1137,
+    1182
+   ],
+   "mcp251xfd_handle_tefif_one": [
+    1165,
+    1272
+   ],
+   "field_mask": [
+    1178,
+    1180
+   ],
+   "can_rx_offload_get_echo_skb": [
+    1185
+   ],
+   "GENMASK": [
+    1192,
+    1388
+   ],
+   "mcp251xfd_tef_ring_update": [
+    1203,
+    1254
+   ],
+   "round_down": [
+    1215,
+    1305,
+    2121
+   ],
+   "mcp251xfd_tef_obj_read": [
+    1226,
+    1261,
+    1266
+   ],
+   "regmap_bulk_read": [
+    1242,
+    1400,
+    1950
+   ],
+   "mcp251xfd_handle_tefif": [
+    1248
+   ],
+   "mcp251xfd_get_tef_len": [
+    1259
+   ],
+   "mcp251xfd_get_tef_linear_len": [
+    1260
+   ],
+   "mcp251xfd_get_tx_free": [
+    1283,
+    2162,
+    2170
+   ],
+   "smp_mb": [
+    1285,
+    2168
+   ],
+   "mcp251xfd_rx_ring_update": [
+    1293,
+    1416
+   ],
+   "mcp251xfd_hw_rx_obj_to_skb": [
+    1315,
+    1378
+   ],
+   "can_dlc2len": [
+    1346,
+    2122,
+    2130
+   ],
+   "get_canfd_dlc": [
+    1346
+   ],
+   "get_can_dlc": [
+    1351
+   ],
+   "mcp251xfd_handle_rxif_one": [
+    1359,
+    1429
+   ],
+   "alloc_canfd_skb": [
+    1369
+   ],
+   "alloc_can_skb": [
+    1371
+   ],
+   "can_rx_offload_queue_sorted": [
+    1379,
+    1518,
+    1620,
+    1687
+   ],
+   "mcp251xfd_rx_obj_read": [
+    1393,
+    1423
+   ],
+   "mcp251xfd_get_rx_obj_addr": [
+    1401
+   ],
+   "mcp251xfd_handle_rxif_ring": [
+    1409,
+    1446
+   ],
+   "mcp251xfd_get_rx_linear_len": [
+    1420
+   ],
+   "mcp251xfd_handle_rxif": [
+    1440
+   ],
+   "mcp251xfd_get_timestamp": [
+    1454,
+    1466,
+    1540
+   ],
+   "mcp251xfd_alloc_can_err_skb": [
+    1461,
+    1511,
+    1661
+   ],
+   "alloc_can_err_skb": [
+    1470,
+    1555
+   ],
+   "mcp251xfd_handle_rxovif": [
+    1473
+   ],
+   "BIT": [
+    1490
+   ],
+   "mcp251xfd_handle_txatif": [
+    1525
+   ],
+   "mcp251xfd_handle_ivmif": [
+    1532
+   ],
+   "WARN_ON": [
+    1560
+   ],
+   "mcp251xfd_handle_cerrif": [
+    1627
+   ],
+   "max": [
+    1656
+   ],
+   "can_change_state": [
+    1662
+   ],
+   "can_bus_off": [
+    1671
+   ],
+   "mcp251xfd_handle_modif": [
+    1695
+   ],
+   "mcp251xfd_handle_serrif": [
+    1733
+   ],
+   "mcp251xfd_handle_eccif_recover": [
+    1778,
+    1878
+   ],
+   "mcp251xfd_get_tx_tail": [
+    1793
+   ],
+   "mcp251xfd_is_2518": [
+    1798
+   ],
+   "spi_sync_transfer": [
+    1814,
+    2411
+   ],
+   "mcp251xfd_handle_eccif": [
+    1823
+   ],
+   "mcp251xfd_get_tx_nr_by_addr": [
+    1844
+   ],
+   "netdev_notice": [
+    1863,
+    1903,
+    1905
+   ],
+   "mcp251xfd_handle_spicrcif": [
+    1887
+   ],
+   "mcp251xfd_handle": [
+    1912,
+    1939,
+    1978,
+    1984,
+    1990,
+    1996,
+    2002,
+    2008,
+    2014,
+    2020,
+    2026,
+    2034
+   ],
+   "irq": [
+    1917
+   ],
+   "__stringify": [
+    1921
+   ],
+   "mcp251xfd_irq": [
+    1925
+   ],
+   "gpiod_get_value_cansleep": [
+    1935,
+    2369
+   ],
+   "mcp251xfd_get_tx_obj_next": [
+    2055,
+    2199
+   ],
+   "mcp251xfd_get_tx_head": [
+    2059,
+    2203
+   ],
+   "mcp251xfd_tx_obj_from_skb": [
+    2065,
+    2200
+   ],
+   "can_len2dlc": [
+    2093
+   ],
+   "can_is_canfd_skb": [
+    2101
+   ],
+   "put_unaligned_le32": [
+    2117,
+    2118
+   ],
+   "round_up": [
+    2122,
+    2130,
+    2132
+   ],
+   "memset": [
+    2124
+   ],
+   "mcp251xfd_spi_cmd_crc_set_len_in_ram": [
+    2137
+   ],
+   "mcp251xfd_tx_obj_write": [
+    2153,
+    2210
+   ],
+   "spi_async": [
+    2156
+   ],
+   "mcp251xfd_tx_busy": [
+    2159,
+    2196
+   ],
+   "netif_stop_queue": [
+    2165,
+    2206,
+    2287
+   ],
+   "netif_start_queue": [
+    2179,
+    2262
+   ],
+   "mcp251xfd_start_xmit": [
+    2184
+   ],
+   "can_dropped_invalid_skb": [
+    2193
+   ],
+   "can_put_echo_skb": [
+    2208
+   ],
+   "mcp251xfd_open": [
+    2222
+   ],
+   "pm_runtime_get_sync": [
+    2228,
+    2531
+   ],
+   "pm_runtime_put_noidle": [
+    2230,
+    2519,
+    2532
+   ],
+   "open_candev": [
+    2234
+   ],
+   "can_rx_offload_enable": [
+    2250
+   ],
+   "request_threaded_irq": [
+    2252
+   ],
+   "dev_name": [
+    2253
+   ],
+   "free_irq": [
+    2267,
+    2289
+   ],
+   "can_rx_offload_disable": [
+    2269,
+    2290
+   ],
+   "close_candev": [
+    2275,
+    2294
+   ],
+   "pm_runtime_put": [
+    2278,
+    2296,
+    2508
+   ],
+   "mcp251xfd_stop": [
+    2283
+   ],
+   "mcp251xfd_register_quirks": [
+    2309,
+    2351,
+    2479
+   ],
+   "mcp251xfd_register_chip_detect": [
+    2318,
+    2487
+   ],
+   "mcp251xfd_is_251X": [
+    2341
+   ],
+   "mcp251xfd_regmap_init": [
+    2354,
+    2674
+   ],
+   "mcp251xfd_register_check_rx_int": [
+    2357,
+    2491
+   ],
+   "devm_gpiod_put": [
+    2380
+   ],
+   "mcp251xfd_register_get_dev_id": [
+    2387,
+    2435
+   ],
+   "mcp251xfd_spi_cmd_read_nocrc": [
+    2410
+   ],
+   "be32_to_cpup": [
+    2415
+   ],
+   "MCP251XFD_QUIRK_ACTIVE": [
+    2426,
+    2446,
+    2447,
+    2448,
+    2449,
+    2450,
+    2451
+   ],
+   "mcp251xfd_register_done": [
+    2430,
+    2499
+   ],
+   "mcp251xfd_register": [
+    2464,
+    2683
+   ],
+   "pm_runtime_get_noresume": [
+    2473
+   ],
+   "pm_runtime_set_active": [
+    2474
+   ],
+   "pm_runtime_enable": [
+    2477
+   ],
+   "register_candev": [
+    2495
+   ],
+   "unregister_candev": [
+    2513,
+    2529
+   ],
+   "pm_runtime_disable": [
+    2517,
+    2534
+   ],
+   "mcp251xfd_unregister": [
+    2525,
+    2703
+   ],
+   "MODULE_DEVICE_TABLE": [
+    2551,
+    2567
+   ],
+   "mcp251xfd_probe": [
+    2569
+   ],
+   "dev_err_probe": [
+    2581
+   ],
+   "devm_gpiod_get_optional": [
+    2584
+   ],
+   "PTR_ERR": [
+    2586,
+    2589,
+    2592,
+    2594,
+    2597,
+    2600,
+    2602,
+    2605,
+    2610
+   ],
+   "IS_ERR": [
+    2588,
+    2596,
+    2604,
+    2608
+   ],
+   "devm_regulator_get_optional": [
+    2591,
+    2599
+   ],
+   "devm_clk_get": [
+    2607
+   ],
+   "dev_err": [
+    2609,
+    2617,
+    2624
+   ],
+   "clk_get_rate": [
+    2612
+   ],
+   "alloc_candev": [
+    2630
+   ],
+   "SET_NETDEV_DEV": [
+    2635
+   ],
+   "spi_set_drvdata": [
+    2642
+   ],
+   "device_get_match_data": [
+    2658
+   ],
+   "spi_get_device_id": [
+    2663
+   ],
+   "spi_setup": [
+    2670
+   ],
+   "can_rx_offload_add_manual": [
+    2678
+   ],
+   "free_candev": [
+    2692,
+    2705
+   ],
+   "mcp251xfd_remove": [
+    2697
+   ],
+   "spi_get_drvdata": [
+    2699
+   ],
+   "can_rx_offload_del": [
+    2702
+   ],
+   "mcp251xfd_runtime_suspend": [
+    2710
+   ],
+   "dev_get_drvdata": [
+    2712,
+    2719
+   ],
+   "mcp251xfd_runtime_resume": [
+    2717
+   ],
+   "SET_RUNTIME_PM_OPS": [
+    2725
+   ],
+   "module_spi_driver": [
+    2739
+   ],
+   "MODULE_AUTHOR": [
+    2741
+   ],
+   "MODULE_DESCRIPTION": [
+    2742
+   ],
+   "MODULE_LICENSE": [
+    2743
+   ]
+  }
+ },
+ "mcp251xfd-crc16.c": {
+  "includes": [
+   [
+    15,
+    "mcp251xfd.h"
+   ]
+  ],
+  "configs": [],
+  "calls": {
+   "mcp251xfd_crc16_byte": [
+    53,
+    63
+   ],
+   "mcp251xfd_crc16": [
+    60,
+    72,
+    81
+   ],
+   "mcp251xfd_crc16_compute": [
+    68,
+    80
+   ],
+   "mcp251xfd_crc16_compute2": [
+    75
+   ]
+  }
+ },
+ "mcp251xfd-regmap.c": {
+  "includes": [
+   [
+    9,
+    "mcp251xfd.h"
+   ],
+   [
+    11,
+    "asm/unaligned.h"
+   ]
+  ],
+  "configs": [
+   "CONFIG_CAN_MCP251XFD_SANITY"
+  ],
+  "calls": {
+   "mcp251xfd_regmap_nocrc_write": [
+    16
+   ],
+   "spi_write": [
+    20,
+    135
+   ],
+   "mcp251xfd_regmap_nocrc_gather_write": [
+    24
+   ],
+   "spi_get_drvdata": [
+    29,
+    77,
+    144,
+    194,
+    268
+   ],
+   "BUILD_BUG_ON": [
+    38,
+    84,
+    85,
+    151,
+    152,
+    206,
+    244,
+    245,
+    276,
+    277
+   ],
+   "IS_ENABLED": [
+    40,
+    87,
+    154,
+    208,
+    279
+   ],
+   "memcpy": [
+    44,
+    45,
+    123,
+    133,
+    173,
+    183,
+    214,
+    335
+   ],
+   "spi_sync_transfer": [
+    47,
+    219
+   ],
+   "ARRAY_SIZE": [
+    47,
+    219,
+    348
+   ],
+   "mcp251xfd_update_bits_read_reg": [
+    50,
+    95
+   ],
+   "MCP251XFD_REG_FIFOCON": [
+    55
+   ],
+   "MCP251XFD_RX_FIFO": [
+    55,
+    61
+   ],
+   "MCP251XFD_REG_FLTCON": [
+    56
+   ],
+   "MCP251XFD_REG_FIFOSTA": [
+    61
+   ],
+   "WARN": [
+    66
+   ],
+   "mcp251xfd_regmap_nocrc_update_bits": [
+    73
+   ],
+   "mcp251xfd_first_byte_set": [
+    91
+   ],
+   "mcp251xfd_last_byte_set": [
+    92
+   ],
+   "spi_message_init": [
+    99,
+    158,
+    284
+   ],
+   "spi_message_add_tail": [
+    100,
+    108,
+    159,
+    167,
+    285,
+    293
+   ],
+   "memset": [
+    115,
+    175,
+    301
+   ],
+   "mcp251xfd_spi_cmd_read_nocrc": [
+    118
+   ],
+   "spi_sync": [
+    119,
+    178,
+    247
+   ],
+   "cpu_to_le32": [
+    126,
+    127
+   ],
+   "mcp251xfd_spi_cmd_write_nocrc": [
+    132
+   ],
+   "mcp251xfd_regmap_nocrc_read": [
+    139
+   ],
+   "mcp251xfd_regmap_crc_gather_write": [
+    189,
+    229
+   ],
+   "mcp251xfd_spi_cmd_write_crc": [
+    213
+   ],
+   "mcp251xfd_crc16_compute": [
+    216
+   ],
+   "put_unaligned_be16": [
+    217
+   ],
+   "mcp251xfd_regmap_crc_write": [
+    223
+   ],
+   "mcp251xfd_regmap_crc_read_one": [
+    236,
+    308
+   ],
+   "get_unaligned_be16": [
+    251,
+    323,
+    330
+   ],
+   "mcp251xfd_crc16_compute2": [
+    252
+   ],
+   "mcp251xfd_regmap_crc_read": [
+    263
+   ],
+   "mcp251xfd_spi_cmd_read_crc": [
+    305
+   ],
+   "netdev_info": [
+    320
+   ],
+   "netdev_err": [
+    327
+   ],
+   "regmap_reg_range": [
+    341,
+    342,
+    343
+   ],
+   "cpu_to_be16": [
+    362,
+    364
+   ],
+   "sizeof_field": [
+    374,
+    375,
+    396,
+    397
+   ],
+   "mcp251xfd_regmap_use_nocrc": [
+    401,
+    524
+   ],
+   "mcp251xfd_regmap_use_crc": [
+    408,
+    533
+   ],
+   "mcp251xfd_regmap_init_nocrc": [
+    415,
+    525
+   ],
+   "devm_regmap_init": [
+    420,
+    473
+   ],
+   "IS_ERR": [
+    422,
+    475
+   ],
+   "PTR_ERR": [
+    423,
+    476
+   ],
+   "devm_kzalloc": [
+    430,
+    439,
+    483,
+    492
+   ],
+   "mcp251xfd_regmap_destroy_nocrc": [
+    455,
+    530
+   ],
+   "devm_kfree": [
+    458,
+    462,
+    511,
+    515
+   ],
+   "mcp251xfd_regmap_init_crc": [
+    468,
+    534
+   ],
+   "mcp251xfd_regmap_destroy_crc": [
+    508,
+    539
+   ],
+   "mcp251xfd_regmap_init": [
+    520
+   ]
+  }
+ },
+ "mcp251xfd.h": {
+  "includes": [
+   [
+    13,
+    "linux/can/core.h"
+   ],
+   [
+    14,
+    "linux/can/dev.h"
+   ],
+   [
+    15,
+    "linux/can/rx-offload.h"
+   ],
+   [
+    16,
+    "linux/gpio/consumer.h"
+   ],
+   [
+    17,
+    "linux/kernel.h"
+   ],
+   [
+    18,
+    "linux/regmap.h"
+   ],
+   [
+    19,
+    "linux/regulator/consumer.h"
+   ],
+   [
+    20,
+    "linux/spi/spi.h"
+   ]
+  ],
+  "configs": [],
+  "calls": {
+   "GENMASK": [
+    19,
+    21,
+    30,
+    38,
+    46,
+    49,
+    50,
+    51,
+    52,
+    55,
+    56,
+    57,
+    58,
+    63,
+    67,
+    68,
+    76,
+    79,
+    80,
+    81,
+    82,
+    85,
+    86,
+    132,
+    133,
+    136,
+    137,
+    138,
+    139,
+    164,
+    167,
+    185,
+    194,
+    198,
+    199,
+    209,
+    220,
+    229,
+    230,
+    234,
+    248,
+    262,
+    264,
+    266,
+    268,
+    270,
+    276,
+    277,
+    282,
+    283,
+    291,
+    292,
+    293,
+    294,
+    301,
+    303,
+    304,
+    315,
+    340,
+    341,
+    344,
+    350,
+    351,
+    356,
+    357,
+    380
+   ],
+   "BIT": [
+    20,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    43,
+    44,
+    45,
+    61,
+    62,
+    73,
+    74,
+    75,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    177,
+    178,
+    179,
+    180,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    261,
+    263,
+    265,
+    267,
+    269,
+    274,
+    275,
+    280,
+    281,
+    290,
+    296,
+    297,
+    298,
+    299,
+    300,
+    308,
+    309,
+    310,
+    316,
+    317,
+    318,
+    319,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    336,
+    337,
+    338,
+    339,
+    345,
+    346,
+    347,
+    352,
+    353,
+    397,
+    399,
+    401,
+    403,
+    405,
+    407
+   ],
+   "MCP251XFD_REG_FIFOCON": [
+    219
+   ],
+   "MCP251XFD_REG_FIFOSTA": [
+    247
+   ],
+   "MCP251XFD_REG_FIFOUA": [
+    258
+   ],
+   "MCP251XFD_REG_FLTCON": [
+    260
+   ],
+   "MCP251XFD_REG_FLTCON_FLTEN": [
+    269
+   ],
+   "MCP251XFD_REG_FLTCON_FLT_MASK": [
+    270
+   ],
+   "MCP251XFD_REG_FLTCON_FBP": [
+    271
+   ],
+   "MCP251XFD_REG_FLTOBJ": [
+    273
+   ],
+   "MCP251XFD_REG_FLTMASK": [
+    279
+   ],
+   "MCP251XFD_RX_FIFO": [
+    371
+   ],
+   "MCP251XFD_OSC_STAB_SLEEP_US": [
+    386
+   ],
+   "MCP251XFD_OSC_STAB_TIMEOUT_US": [
+    387
+   ],
+   "MCP251XFD_POLL_SLEEP_US": [
+    388
+   ],
+   "MCP251XFD_POLL_TIMEOUT_US": [
+    389
+   ],
+   "sizeof_field": [
+    419,
+    425,
+    431,
+    438,
+    445
+   ],
+   "MCP251XFD_IS": [
+    588,
+    595,
+    596,
+    597
+   ],
+   "_model": [
+    590
+   ],
+   "mcp251xfd_first_byte_set": [
+    599
+   ],
+   "mcp251xfd_last_byte_set": [
+    606
+   ],
+   "mcp251xfd_cmd_reset": [
+    613
+   ],
+   "cpu_to_be16": [
+    615,
+    621,
+    627,
+    665,
+    680
+   ],
+   "mcp251xfd_spi_cmd_read_nocrc": [
+    619
+   ],
+   "mcp251xfd_spi_cmd_write_nocrc": [
+    625,
+    703
+   ],
+   "mcp251xfd_reg_in_ram": [
+    630,
+    673,
+    688
+   ],
+   "regmap_reg_range": [
+    633
+   ],
+   "regmap_reg_in_range": [
+    636
+   ],
+   "__mcp251xfd_spi_cmd_crc_set_len": [
+    640,
+    653,
+    659,
+    673,
+    688
+   ],
+   "mcp251xfd_spi_cmd_crc_set_len_in_ram": [
+    651
+   ],
+   "mcp251xfd_spi_cmd_crc_set_len_in_reg": [
+    657
+   ],
+   "mcp251xfd_spi_cmd_read_crc_set_addr": [
+    663,
+    672
+   ],
+   "mcp251xfd_spi_cmd_read_crc": [
+    669
+   ],
+   "mcp251xfd_spi_cmd_write_crc_set_addr": [
+    677,
+    687,
+    699
+   ],
+   "mcp251xfd_spi_cmd_write_crc": [
+    684
+   ],
+   "mcp251xfd_spi_cmd_write": [
+    692
+   ],
+   "mcp251xfd_get_tef_obj_addr": [
+    711
+   ],
+   "mcp251xfd_get_tx_obj_addr": [
+    718,
+    772,
+    773,
+    776
+   ],
+   "mcp251xfd_get_rx_obj_addr": [
+    724
+   ],
+   "mcp251xfd_get_tef_head": [
+    729
+   ],
+   "mcp251xfd_get_tef_tail": [
+    734,
+    750
+   ],
+   "mcp251xfd_get_tef_len": [
+    739,
+    748
+   ],
+   "mcp251xfd_get_tef_linear_len": [
+    744
+   ],
+   "min_t": [
+    750,
+    804
+   ],
+   "mcp251xfd_get_tx_head": [
+    753
+   ],
+   "mcp251xfd_get_tx_tail": [
+    758
+   ],
+   "mcp251xfd_get_tx_free": [
+    763
+   ],
+   "mcp251xfd_get_tx_nr_by_addr": [
+    769
+   ],
+   "mcp251xfd_get_rx_head": [
+    782
+   ],
+   "mcp251xfd_get_rx_tail": [
+    787,
+    804
+   ],
+   "mcp251xfd_get_rx_len": [
+    792,
+    802
+   ],
+   "mcp251xfd_get_rx_linear_len": [
+    798
+   ],
+   "mcp251xfd_for_each_tx_obj": [
+    807
+   ],
+   "mcp251xfd_for_each_rx_ring": [
+    812
+   ],
+   "mcp251xfd_regmap_init": [
+    817
+   ],
+   "mcp251xfd_crc16_compute2": [
+    818
+   ],
+   "mcp251xfd_crc16_compute": [
+    820
+   ]
+  }
+ },
+ "Kconfig": {
+  "includes": [],
+  "configs": [],
+  "calls": {}
+ },
+ "Makefile": {
+  "includes": [],
+  "configs": [
+   "CONFIG_CAN_MCP251XFD"
+  ],
+  "calls": {}
+ }
+}
